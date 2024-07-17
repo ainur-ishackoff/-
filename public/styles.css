@@ -1,0 +1,297 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f4f4f4;
+}
+
+.chat-container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: #fff;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.group-list {
+    margin-top: 20px;
+}
+
+.group {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.group:hover {
+    background-color: #f2f2f2;
+}
+
+.group-name {
+    margin-right: 10px; /* Отступ справа от имени группы */
+}
+
+.edit-group-icon, .delete-group-icon {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.edit-group-icon {
+    color: #007bff; /* Голубой цвет иконки */
+}
+
+.delete-group-icon {
+    color: #dc3545; /* Красный цвет иконки */
+}
+
+.chat-content {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.message-list {
+    height: 400px;
+    overflow-y: auto;
+    padding-bottom: 20px;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f5f5f5;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.message-content {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.message-sender {
+    font-weight: bold;
+}
+
+.message-text {
+    margin-left: 5px; /* Отступ слева */
+}
+
+.message-time {
+    font-size: 0.8rem;
+    color: #888;
+    margin-left: 10px;
+}
+
+.message-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* Стили для кнопок действий в сообщениях */
+.edit-button, .delete-button, .pin-button, .unpin-button { 
+    background: none;
+    border: none;
+    font-size: 1.2rem; 
+    cursor: pointer;
+    margin-left: 10px;
+    padding: 5px 10px;
+    border-radius: 30px; /* Закругленные углы */
+    display: flex;
+    align-items: center;
+    transition: background-color 0.2s ease-in-out;
+    color: white; /* Белый цвет текста */
+}
+
+.edit-button:hover, .delete-button:hover, .pin-button:hover, .unpin-button:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Полупрозрачный белый фон при наведении */
+}
+
+.edit-button {
+    background-color: #007bff; /* Голубой цвет фона */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Красный цвет фона */
+}
+
+.pin-button {
+    background-color: #ffc107; /* Желтый цвет фона */
+}
+
+.unpin-button { 
+    background-color: #ffc107; /* Желтый цвет фона */
+}
+
+#messageForm {
+    margin-top: 20px;
+    display: flex;
+}
+
+#messageInput {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-family: 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', 'Apple Color Emoji', sans-serif;
+    resize: none;
+}
+
+#messageForm button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#messageForm button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.chat-tools {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.chat-tools button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chat-tools button:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#searchInput {
+    margin-top: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.message-file {
+    display: block;
+    margin-top: 10px;
+    max-width: 100%;
+}
+
+.message-image {
+    max-width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.message-video {
+    max-width: 100%;
+    max-height: 300px;
+}
+
+.add-group-button {
+    width: 40px;
+    height: 40px;
+    background-color: #007bff; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-group-button:hover {
+    background-color: #0056b3; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для эмодзи */
+.emojione {
+    font-size: 1.5em;
+}
+
+.group button {
+    background-color: #dc3545;
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.group button:hover {
+    background-color: #c82333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для кнопок эмодзи */
+#emojiButton {
+    background-color: white; /* Белый фон */
+    color: #007bff; /* Голубой текст */
+    border: 1px solid #007bff; /* Голубая граница */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; /* Добавляем отступ */
+    font-size: 1.2em; /* Делаем смайлик больше */
+    transition: background-color 0.2s ease-in-out; /* Добавляем плавную анимацию */
+}
+
+#emojiButton:hover {
+    background-color: #007bff; /* Голубой фон при наведении */
+    color: white; /* Белый текст при наведении */
+}
+
+#fileButton {
+    background-color: white; /* Белый фон */
+    color: #007bff; /* Голубой текст */
+    border: 1px solid #007bff; /* Голубая граница */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-right: 10px; /* Добавляем отступ */
+    transition: background-color 0.2s ease-in-out; /* Добавляем плавную анимацию */
+}
+
+#fileButton:hover {
+    background-color: #007bff; /* Голубой фон при наведении */
+    color: white; /* Белый текст при наведении */
+}
+
+#feedbackIndicator {
+    margin-top: 10px;
+    text-align: center;
+    color: #007bff;
+}
+
+.pinned-messages {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}

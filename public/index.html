@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Внутренний чат</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script src="https://cdn.jsdelivr.net/npm/emojione@4.0.0/lib/js/emojione.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emojione@4.0.0/lib/css/emojione.min.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="sidebar">
+            <h2>Группы</h2>
+            <div class="add-group-button" id="addGroupButton">+</div>
+            <div class="group-list" id="groupList">
+                <!-- Список групп будет добавлен здесь -->
+            </div>
+        </div>
+        <div class="chat-content">
+            <div class="chat-header">
+                <h3 id="currentChatName">Чат</h3>
+            </div>
+            <div class="message-list" id="messageList">
+                <!-- Сообщения будут отображаться здесь -->
+            </div>
+            <form id="messageForm">
+                <textarea id="messageInput" placeholder="Введите сообщение..." rows="3"></textarea>
+                <input type="file" id="fileInput" hidden>
+                <button type="button" id="fileButton">Файл</button>
+                <button type="submit">Отправить</button>
+            </form>
+            <div id="feedbackIndicator"></div>
+
+            <div class="chat-tools">
+                <button id="photoButton">Фото</button>
+                <button id="videoButton">Видео</button>
+                <button id="voiceButton">Запись голоса</button>
+                <button id="galleryButton">Галерея</button>
+                <button id="locationButton">Геопозиция</button>
+                <button id="contactsButton">Контакты</button>
+                <button id="notificationsButton">Уведомления</button>
+            </div>
+            <input type="text" id="searchInput" placeholder="Поиск...">
+        </div>
+    </div>
+    <script src="chat.js"></script>
+</body>
+</html>

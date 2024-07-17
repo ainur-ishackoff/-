@@ -1,0 +1,246 @@
+/* styles.css */
+
+
+
+.chat-container {
+    width: 100%;
+    max-width: 900px;
+    height: 90vh;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.header {
+    padding: 20px;
+    border-bottom: 2px solid #e5e7eb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f1f5f9;
+}
+
+#searchInput-0 , #searchInput-1{
+    padding: 10px;
+    border-radius: 30px;
+    border: 1px solid #ccc;
+    width: 200px;
+    transition: width 0.3s ease;
+}
+#searchInput-0:focus, #searchInput-1:focus {
+    width: 300px;
+}
+
+#themeToggleButton-0, #themeToggleButton-1, #newGroupButton-0, #newGroupButton-1 {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+#themeToggleButton-0:hover, #newGroupButton-0:hover, #themeToggleButton-1:hover, #newGroupButton-1:hover {
+    background-color: #0056b3;
+}
+
+.group-list {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    display: none;
+}
+
+.group {
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+    cursor: pointer;
+}
+
+.message-list {
+    flex-grow: 1;
+    overflow-y: scroll;
+    padding: 20px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: #f7f9fc;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 70%;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-message {
+    align-self: flex-end;
+    background-color: #007bff;
+    color: white;
+}
+.user-message span{
+    color: white
+}
+
+.other-message {
+    align-self: flex-start;
+    background-color: #e9ecef;
+}
+
+.message-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.message-time,
+.message-sender,
+.message-status {
+    font-size: 0.8rem;
+    color: #666;
+    margin-left: 10px;
+}
+
+.message-status {
+    position: absolute;
+    bottom: 5px;
+    right: 10px;
+}
+
+#feedbackIndicator-0, #feedbackIndicator-1 {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    padding: 20px;
+    border-top: 1px solid #e5e7eb;
+    background-color: #f1f5f9;
+}
+
+#messageInput-0 , #messageInput-1 {
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    margin-right: 10px;
+}
+
+#fileButton-0, #emojiButton-0, #fileButton-1, #emojiButton-1 {
+    color: #007bff;
+    padding: 0 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#fileButton-0:hover, #emojiButton-0:hover , #fileButton-1:hover, #emojiButton-1:hover {
+    color: #007bff;
+}
+
+.call-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+}
+
+#callButton-0, #videoCallButton-0, #callButton-1, #videoCallButton-1 {
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#callButton-0:hover, #videoCallButton-0:hover, #callButton-1:hover, #videoCallButton-1:hover {
+    background-color: #218838;
+}
+
+.dark-theme {
+    background-color: #181818;
+    color: white;
+}
+
+.dark-theme .chat-container {
+    background-color: #252525;
+}
+
+.dark-theme .message {
+    background-color: #3a3a3a;
+}
+
+.dark-theme .user-message {
+    background-color: #1a73e8;
+}
+.dark-theme .other-message span{
+    color: white
+}
+
+.dark-theme .other-message {
+    background-color: #6c757d;
+}
+
+.dark-theme .header,
+.dark-theme form {
+    background-color: #303030;
+    border-color: #444;
+}
+
+.dark-theme #searchInput-0 , .dark-theme #searchInput-1 {
+    background-color: #444;
+    color: white;
+    border-color: #555;
+}
+
+.dark-theme #searchInput-0:focus, .dark-theme #searchInput-1:focus {
+    background-color: #555;
+}
+
+.dark-theme #themeToggleButton-0, .dark-theme #newGroupButton-0, .dark-theme #themeToggleButton-1, .dark-theme #newGroupButton-1 {
+    background-color: #1a73e8;
+}
+
+.dark-theme #themeToggleButton-0:hover, .dark-theme #newGroupButton-0:hover, .dark-theme #themeToggleButton-1:hover, .dark-theme #newGroupButton-1:hover {
+    background-color: #1666c1;
+}
+
+.dark-theme #callButton-0, .dark-theme #videoCallButton-0, .dark-theme #callButton-1, .dark-theme #videoCallButton-1 {
+    background-color: #34a853;
+}
+
+.dark-theme #callButton-0:hover, .dark-theme #videoCallButton-0:hover, .dark-theme #callButton-1:hover, .dark-theme #videoCallButton-1:hover {
+    background-color: #2d8c46;
+}
+
+.app, .main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+.a{
+    display: inline-flex;
+    margin:50px
+}
